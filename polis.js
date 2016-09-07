@@ -163,7 +163,7 @@ function recommendTVNew1(apiresp) {
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
-        data: "{"+apiresp+"}",
+        data: JSON.parse("{" + apiresp + "}"),
         source: "Zero Service - app_zero.js"
     });
 }
