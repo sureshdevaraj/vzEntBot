@@ -26,9 +26,8 @@ router.post('/webhook', function (req, res) {
             //res.json(recommendTV());
             recommendTVNew(function (str) {
                 console.log("inside showrecommendation ");
-                var newstr = JSON.stringify(str);
-              
-                res.json(newstr);
+                var endString = str.replace(/'/g, '"');
+                res.json(endString);
             });
             break;
         case "Recommendation":
