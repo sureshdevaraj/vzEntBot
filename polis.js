@@ -25,6 +25,7 @@ router.post('/webhook', function (req, res) {
         case "showrecommendation":
             //res.json(recommendTV());
             recommendTVNew(function (str) {
+                console.log("inside showrecommendation ");
                 res.json(str);
             });
             break;
@@ -36,13 +37,7 @@ router.post('/webhook', function (req, res) {
     }
 });
 
-function callback(body)
-{
-	console.log("inside callback ");
 
-console.log(body);
-	return body;
-}
 
 function performcall(){
 console.log("starting performcall");
