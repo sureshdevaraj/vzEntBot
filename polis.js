@@ -23,7 +23,10 @@ router.post('/webhook', function (req, res) {
             res.json(billInquiry());
             break;
         case "showrecommendation":
-            res.json(recommendTV());
+            //res.json(recommendTV());
+            recommendTVNew(function (str) {
+                res.json(str);
+            });
             break;
         case "Recommendation":
             res.json(recommendTV());
@@ -139,6 +142,17 @@ var responseObject='';
  };
 
 
+
+function recommendTVNew(callback) {
+    request.post(
+        'http://vzbotapi.azurewebsites.net/api/values',
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                callback(body);
+            }
+        }
+    );
+ }
 function recommendTV() {
     return ({
         speech: "Here are some recommendations for tonight",
