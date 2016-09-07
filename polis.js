@@ -161,7 +161,7 @@ function recommendTVNew(callback) {
     );
  }
 function recommendTVNew1(apiresp) {
-    var output = str2json.convert( apiresp );
+    var output = JSON.parse(apiresp);
     console.log("apiresp:" + apiresp);
     console.log("output:" + output);
     return output;
