@@ -2,6 +2,7 @@ var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
 var servercall = require('./servicecall.js');
+var str2json = require('string-to-json');
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -160,10 +161,12 @@ function recommendTVNew(callback) {
     );
  }
 function recommendTVNew1(apiresp) {
+    var output = str2json.convert("{"+ apiresp+"}");
+ 
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
-        data: "{"+apiresp+"}",
+        data: output,
         source: "Zero Service - app_zero.js"
     });
 }
