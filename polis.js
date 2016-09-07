@@ -161,8 +161,9 @@ function recommendTVNew(callback) {
     );
  }
 function recommendTVNew1(apiresp) {
-    var output = str2json.convert("{"+ apiresp+"}");
- 
+    var output = str2json.convert("{" + apiresp + "}");
+    console.log("apiresp:" + apiresp);
+    console.log("output:"+output);
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
