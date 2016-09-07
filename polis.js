@@ -26,8 +26,8 @@ router.post('/webhook', function (req, res) {
             //res.json(recommendTV());
             recommendTVNew(function (str) {
                 console.log("inside showrecommendation ");
-                var endString = str.replace(/'/g, '"');
-                res.json(endString);
+               
+                res.json(recommendTVNew1(endString));
             });
             break;
         case "Recommendation":
@@ -39,6 +39,16 @@ router.post('/webhook', function (req, res) {
 });
 
 
+function recommendTVNew(callback) {
+    request.post(
+        'http://vzbotapi.azurewebsites.net/api/values',
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                callback(body);
+            }
+        }
+    );
+}
 
 function performcall(){
 console.log("starting performcall");
@@ -149,6 +159,14 @@ function recommendTVNew(callback) {
         }
     );
  }
+function recommendTVNew1(apiresp) {
+    return ({
+        speech: "Here are some recommendations for tonight",
+        displayText: "TV recommendations",
+        data: { apiresp},
+        source: "Zero Service - app_zero.js"
+    });
+}
 function recommendTV() {
     return ({
         speech: "Here are some recommendations for tonight",
