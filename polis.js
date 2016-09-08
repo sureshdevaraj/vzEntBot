@@ -25,16 +25,20 @@ router.post('/webhook', function (req, res) {
             break;
         case "showrecommendation":
             //res.json(recommendTV());
+            /*
             recommendTVNew(function (str) {
                 console.log("inside showrecommendation ");
              
-                res.json(performrecommendTVNew('http://vzbotapi.azurewebsites.net/api/values', 'GET', {
-                   
-                }, function (data) {
-                }));
-
-                //res.json(recommendTVNew1(str));
+                
+                res.json(recommendTVNew1(str));
             });
+            */
+
+            performRequest('http://vzbotapi.azurewebsites.net/api/values', 'GET', '', function (data) {
+                res.json(data);
+                console.log('Logged in:', data);
+            });
+
             break;
         case "Recommendation":
             res.json(recommendTV());
@@ -153,59 +157,7 @@ var responseObject='';
   }
  };
 
- function performrecommendTVNew(endpoint, method, data, success) {
-     console.log('staring performRequest ');
-     var querystring = require('querystring');
-     var https = require('https');
 
-     var host = '';
-     var username = '';
-     var password = '';
-     var apiKey = '';
-     var sessionId = null;
-     var deckId = '68DC5A20-EE4F-11E2-A00C-0858C0D5C2ED';
-     var responseObject = '';
-     var responseString = '';
-
-     var dataString = JSON.stringify(data);
-     var headers = {};
-
-     
-     var options = {
-         host: host,
-         path: endpoint,
-         method: method,
-         headers: headers
-     };
-
-     var req = https.request(options, function (res) {
-         res.setEncoding('utf-8');
-
-         res.on('data', function (data) {
-             responseString += data;
-         });
-
-         res.on('end', function () {
-             console.log('responseString:' + responseString);
-             responseObject = JSON.parse(responseString);
-             //console.log('responseObject:'+ responseObject);
-             //console.log('dataString:'+ dataString);
-
-             success(responseObject);
-         });
-     });
-     //console.log('endpoint:'+ endpoint);
-     req.write(dataString);
-     req.end();
-
-     return {
-
-         speech: 'response from call',
-         displayText: "TV recommendations",
-         data: responseObject,
-         source: "test functions"
-     }
- };
 
 function recommendTVNew(callback) {
     request.post(
