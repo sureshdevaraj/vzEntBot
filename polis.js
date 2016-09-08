@@ -185,7 +185,7 @@ function recommendTVNew1(apiresp) {
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
-        data: parsedResponse["items"][0]["data"]["facebook"],
+        data: parsedResponse[0],
         source: "Zero Service - app_zero.js"
     });
     
