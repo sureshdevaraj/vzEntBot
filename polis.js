@@ -177,13 +177,15 @@ function recommendTVNew1(apiresp) {
     console.log("apiresp1:" + JSON.stringify(objToJson));
     //console.log("output1:" + output);
     var aa = JSON.parse(apiresp);
+    var cc = aa.data.facebook.objToJson;
+    console.log("objToJson"+cc);
     //console.log(aa);
     //return objToJson;
     
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
-        data: aa.data[0],
+        data: aa.data.facebook.objToJson,
         source: "Zero Service - app_zero.js"
     });
     
