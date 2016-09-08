@@ -161,10 +161,10 @@ function recommendTVNew(callback) {
     );
  }
 function recommendTVNew1(apiresp) {
-    var output = eval('(' + JSON.stringify(apiresp) + ')');
-    console.log("apiresp:" + output);
+    //var output = eval('(' + JSON.stringify(apiresp) + ')');
+    //console.log("apiresp:" + output);
     var aa = JSON.parse(output);
-    console.log(aa);
+    //console.log(aa);
     return aa;
     /*
     return ({
