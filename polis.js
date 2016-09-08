@@ -162,9 +162,9 @@ function recommendTVNew(callback) {
  }
 function recommendTVNew1(apiresp) {
     var output = eval('(' + JSON.stringify(apiresp) + ')');
-    console.log("apiresp:" + apiresp);
-    console.log("output:" + output);
-    return output;
+    console.log("apiresp:" + output);
+    console.log("output:" + JSON.parse(output));
+    return JSON.parse(output);
     /*
     return ({
         speech: "Here are some recommendations for tonight",
