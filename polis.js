@@ -25,19 +25,18 @@ router.post('/webhook', function (req, res) {
             break;
         case "showrecommendation":
             //res.json(recommendTV());
-            /*
+            
             recommendTVNew(function (str) {
-                console.log("inside showrecommendation ");
-             
-                
+                console.log("inside showrecommendation ");                
                 res.json(recommendTVNew1(str));
             });
-            */
-
+           
+            /*
             performRequest('http://vzbotapi.azurewebsites.net/api/values', 'GET', '', function (data) {
                 res.json(data);
                 console.log('Logged in:', data);
             });
+            */
 
             break;
         case "Recommendation":
@@ -179,7 +178,7 @@ function recommendTVNew1(apiresp) {
     //console.log("output1:" + output);
     //var aa = JSON.parse(output);
     //console.log(aa);
-    return JSON.stringify(objToJson);
+    return objToJson;
     /*
     return ({
         speech: "Here are some recommendations for tonight",
