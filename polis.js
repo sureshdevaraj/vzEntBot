@@ -167,7 +167,7 @@ function recommendTVNew1(apiresp) {
 
 
     //var output = eval('(' + JSON.stringify(apiresp) + ')');
-    console.log("apiresp1:" + apiresp);
+    console.log("apiresp1:" + JSON.stringify(objToJson));
     //console.log("output1:" + output);
     //var aa = JSON.parse(output);
     //console.log(aa);
