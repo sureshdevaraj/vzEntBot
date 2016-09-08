@@ -41,7 +41,7 @@ router.post('/webhook', function (req, res) {
 
 
 function recommendTVNew(callback) {
-    request.get(
+    request.post(
         'http://vzbotapi.azurewebsites.net/api/values',
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
