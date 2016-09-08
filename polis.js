@@ -27,7 +27,7 @@ router.post('/webhook', function (req, res) {
             //res.json(recommendTV());
             recommendTVNew(function (str) {
                 console.log("inside showrecommendation ");
-                res.setHeader('Content-Type', 'application/json');
+               
                 res.json(recommendTVNew1(str));
             });
             break;
@@ -161,10 +161,10 @@ function recommendTVNew(callback) {
     );
  }
 function recommendTVNew1(apiresp) {
-   
-    console.log("apiresp1:" + apiresp);
-
-    return apiresp;
+    var output = eval('(' + JSON.stringify(apiresp) + ')');
+    console.log("apiresp:" + apiresp);
+    console.log("output:" + output);
+    return output;
     /*
     return ({
         speech: "Here are some recommendations for tonight",
