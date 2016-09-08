@@ -183,7 +183,7 @@ function recommendTVNew1(apiresp) {
     return ({
         speech: "Here are some recommendations for tonight",
         displayText: "TV recommendations",
-        data: aa,
+        data: aa.data[0].facebook[0],
         source: "Zero Service - app_zero.js"
     });
     
