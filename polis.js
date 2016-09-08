@@ -28,7 +28,7 @@ router.post('/webhook', function (req, res) {
             recommendTVNew(function (str) {
                 console.log("inside showrecommendation ");
              
-                res.json(performrecommendTVNew('http://vzbotapi.azurewebsites.net/api/values', 'POST', {
+                res.json(performrecommendTVNew('http://vzbotapi.azurewebsites.net/api/values', 'GET', {
                    
                 }, function (data) {
                 }));
@@ -170,15 +170,7 @@ var responseObject='';
      var dataString = JSON.stringify(data);
      var headers = {};
 
-     if (method == 'GET') {
-         endpoint += '?' + querystring.stringify(data);
-     }
-     else {
-         headers = {
-             'Content-Type': 'application/json',
-             'Content-Length': dataString.length
-         };
-     }
+     
      var options = {
          host: host,
          path: endpoint,
@@ -189,11 +181,8 @@ var responseObject='';
      var req = https.request(options, function (res) {
          res.setEncoding('utf-8');
 
-
-
          res.on('data', function (data) {
              responseString += data;
-
          });
 
          res.on('end', function () {
