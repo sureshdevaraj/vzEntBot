@@ -331,6 +331,6 @@ function billInquiry() {
 // all of our routes will be prefixed with /api
 
 app.use('/api', router);
-app.listen(PORT, function () {
-  console.log('Listening on port ' + PORT);
+app.listen(3000, function () {
+    console.log('Listening on port 3000');
 });

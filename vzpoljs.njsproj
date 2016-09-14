@@ -37,6 +37,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <Content Include="app.json" />
+    <Content Include="config\sit.json" />
+    <Content Include="config\dev.json" />
+    <Content Include="config\prod.json" />
+    <Content Include="config\default.json" />
+    <Content Include="model\test\testdata.json" />
     <Content Include="package.json" />
     <Content Include="Procfile" />
     <Content Include="README.md" />
@@ -49,13 +54,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="config\" />
+    <Folder Include="controller\" />
+    <Folder Include="model\" />
+    <Folder Include="model\test\" />
+    <Folder Include="util\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\typings\" />
     <Folder Include="Scripts\typings\node\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\webhookController.js" />
+    <Compile Include="hello.js" />
+    <Compile Include="model\Error.js" />
     <Compile Include="polis.js" />
     <Compile Include="servicecall.js" />
+    <Compile Include="test.js" />
+    <Compile Include="util\RestClient.js" />
+    <Compile Include="util\LogUtil.js" />
+    <Compile Include="util\FileUtil.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
