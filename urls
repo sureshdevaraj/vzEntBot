@@ -17,3 +17,6 @@ Enter file contents herefunction recommendTVNew(callback) {
   Node.js 6.*.*, 64-bit Windows: npm install chilkat_node6_win32
   
   http://codesamplez.com/programming/using-json-in-node-js-javascript
+  
+   https://www.quora.com/How-do-I-make-a-RESTful-application-in-Node-js#
+http://railscasts.com/episodes/320-jbuilder?view=asciicast
