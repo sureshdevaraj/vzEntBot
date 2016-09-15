@@ -517,6 +517,13 @@
     <Content Include="node_modules\isstream\LICENSE.md" />
     <Content Include="node_modules\isstream\package.json" />
     <Content Include="node_modules\isstream\README.md" />
+    <Content Include="node_modules\jbuilder\.npmignore" />
+    <Content Include="node_modules\jbuilder\.travis.yml" />
+    <Content Include="node_modules\jbuilder\History.md" />
+    <Content Include="node_modules\jbuilder\Makefile" />
+    <Content Include="node_modules\jbuilder\package.json" />
+    <Content Include="node_modules\jbuilder\readme.md" />
+    <Content Include="node_modules\jbuilder\test\mocha.opts" />
     <Content Include="node_modules\jodid25519\.npmignore" />
     <Content Include="node_modules\jodid25519\.travis.yml" />
     <Content Include="node_modules\jodid25519\almond.0" />
@@ -1005,6 +1012,9 @@
     <Folder Include="node_modules\is-typedarray\" />
     <Folder Include="node_modules\isarray\" />
     <Folder Include="node_modules\isstream\" />
+    <Folder Include="node_modules\jbuilder\" />
+    <Folder Include="node_modules\jbuilder\lib\" />
+    <Folder Include="node_modules\jbuilder\test\" />
     <Folder Include="node_modules\jodid25519\" />
     <Folder Include="node_modules\jodid25519\lib\" />
     <Folder Include="node_modules\jsbn\" />
@@ -1417,6 +1427,9 @@
     <Compile Include="node_modules\isarray\test.js" />
     <Compile Include="node_modules\isstream\isstream.js" />
     <Compile Include="node_modules\isstream\test.js" />
+    <Compile Include="node_modules\jbuilder\index.js" />
+    <Compile Include="node_modules\jbuilder\lib\jbuilder.js" />
+    <Compile Include="node_modules\jbuilder\test\jbuilder.js" />
     <Compile Include="node_modules\jodid25519\index.js" />
     <Compile Include="node_modules\jodid25519\lib\core.js" />
     <Compile Include="node_modules\jodid25519\lib\curve255.js" />
