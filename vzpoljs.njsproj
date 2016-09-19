@@ -610,6 +610,12 @@
     <Content Include="node_modules\negotiator\LICENSE" />
     <Content Include="node_modules\negotiator\package.json" />
     <Content Include="node_modules\negotiator\README.md" />
+    <Content Include="node_modules\node-rest-client\.npmignore" />
+    <Content Include="node_modules\node-rest-client\LICENSE" />
+    <Content Include="node_modules\node-rest-client\package.json" />
+    <Content Include="node_modules\node-rest-client\readme.md" />
+    <Content Include="node_modules\node-rest-client\test\message.json" />
+    <Content Include="node_modules\node-rest-client\test\message.xml" />
     <Content Include="node_modules\node-uuid\.npmignore" />
     <Content Include="node_modules\node-uuid\benchmark\bench.gnu" />
     <Content Include="node_modules\node-uuid\benchmark\bench.sh" />
@@ -1011,6 +1017,9 @@
     <Folder Include="node_modules\ms\" />
     <Folder Include="node_modules\negotiator\" />
     <Folder Include="node_modules\negotiator\lib\" />
+    <Folder Include="node_modules\node-rest-client\" />
+    <Folder Include="node_modules\node-rest-client\lib\" />
+    <Folder Include="node_modules\node-rest-client\test\" />
     <Folder Include="node_modules\node-uuid\" />
     <Folder Include="node_modules\node-uuid\benchmark\" />
     <Folder Include="node_modules\node-uuid\bin\" />
@@ -2434,6 +2443,10 @@
     <Compile Include="node_modules\negotiator\lib\encoding.js" />
     <Compile Include="node_modules\negotiator\lib\language.js" />
     <Compile Include="node_modules\negotiator\lib\mediaType.js" />
+    <Compile Include="node_modules\node-rest-client\lib\node-rest-client.js" />
+    <Compile Include="node_modules\node-rest-client\test\specs.js" />
+    <Compile Include="node_modules\node-rest-client\test\test-proxy.js" />
+    <Compile Include="node_modules\node-rest-client\test\test-servers.js" />
     <Compile Include="node_modules\node-uuid\benchmark\benchmark.js" />
     <Compile Include="node_modules\node-uuid\test\compare_v1.js" />
     <Compile Include="node_modules\node-uuid\test\test.js" />
