@@ -42,6 +42,7 @@
     <Content Include="config\prod.json" />
     <Content Include="config\default.json" />
     <Content Include="model\test\testdata.json" />
+    <Content Include="noderestcall" />
     <Content Include="node_modules\.bin\har-validator" />
     <Content Include="node_modules\.bin\har-validator.cmd" />
     <Content Include="node_modules\.bin\mime" />
@@ -2663,6 +2664,7 @@
     <Compile Include="node_modules\xtend\immutable.js" />
     <Compile Include="node_modules\xtend\mutable.js" />
     <Compile Include="node_modules\xtend\test.js" />
+    <Compile Include="polis_olld.js" />
     <Compile Include="polis.js" />
     <Compile Include="servicecall.js" />
     <Compile Include="test.js" />
