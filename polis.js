@@ -46,7 +46,7 @@ router.get('/webhook', function (req, res) {
 
         var parsedData = "";
         console.log("success1");
-        parsedData = JSON.parse(data);
+       
         res.json(parsedData);
 
     });
